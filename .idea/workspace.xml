@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e8cbd1bb-76f2-4234-9a0a-1b93bbf5c16c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/automate_git.py" afterPath="$PROJECT_DIR$/automate_git.py" />
-    </list>
+    <list default="true" id="e8cbd1bb-76f2-4234-9a0a-1b93bbf5c16c" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -71,8 +69,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="138" />
-    <option name="y" value="50" />
+    <option name="x" value="-260" />
+    <option name="y" value="66" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -267,15 +265,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524204527489</updated>
-      <workItem from="1524204530476" duration="4560000" />
+      <workItem from="1524204530476" duration="5159000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4560000" />
+    <option name="totallyTimeSpent" value="5159000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="138" y="50" width="1936" height="1056" extended-state="0" />
+    <frame x="-260" y="66" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
