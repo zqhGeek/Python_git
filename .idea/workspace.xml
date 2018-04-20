@@ -21,7 +21,7 @@
         <entry file="file://$PROJECT_DIR$/automate_git.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
               <folding>
                 <element signature="e#23#40#0" expanded="true" />
               </folding>
@@ -267,12 +267,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524204527489</updated>
-      <workItem from="1524204530476" duration="3960000" />
+      <workItem from="1524204530476" duration="4560000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3960000" />
+    <option name="totallyTimeSpent" value="4560000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="138" y="50" width="1936" height="1056" extended-state="0" />
@@ -331,7 +331,7 @@
     <entry file="file://$PROJECT_DIR$/automate_git.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
           <folding>
             <element signature="e#23#40#0" expanded="true" />
           </folding>
