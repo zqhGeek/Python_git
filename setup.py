@@ -1,14 +1,17 @@
+import sys
 from cx_Freeze import setup, Executable
 
+# Dependencies are automatically detected, but it might need fine tuning.  
+build_exe_options = {"packages": ["os"], "excludes": ["tkinter"]}
+
+# GUI applications require a different base on Windows (the default is for a  
+# console application).  
 base = None
+if sys.platform == "win32":
+    base = "Win32GUI"
 
-executables = [
-    Executable('automate_git.py', base=base)
-]
-
-setup(
-    name="TaoBao",
-    version="1.0",
-    description="http://blog.csdn.net/u012175089",
-    executables=executables, requires=['cx_Freeze']
-)
+setup(name="zqhkey",
+      version="8.1",
+      description="application!",
+      options={"build_exe": build_exe_options},
+      executables=[Executable("automate_git.py", base=base, targetName='launch.exe', icon="qq.ico")])
