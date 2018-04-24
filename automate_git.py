@@ -6,7 +6,9 @@ import datetime
 
 import os
 
-os.chdir("D:\IDEA_Project\python_git")
+print('请输入仓库路径:', end='')
+path = input()
+os.chdir(path)
 print(os.getcwd())
 subprocess.call(["git", "add", "."])
 print('请输入提交备注:', end='')
