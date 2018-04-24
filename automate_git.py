@@ -4,6 +4,10 @@ import subprocess
 
 import datetime
 
+import os
+
+os.chdir("D:\IDEA_Project\python_git")
+print(os.getcwd())
 subprocess.call(["git", "add", "."])
 print('请输入提交备注:', end='')
 txt = input()
