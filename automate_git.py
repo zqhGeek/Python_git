@@ -11,10 +11,13 @@ dictObj = {
     'branch': '',
     'remote': ''
 }
+if os.access("git.txt", os.F_OK):
+    fr = open("git.txt", "r", encoding='utf-8')
 
-fr = open("git.txt", "r", encoding='utf-8')
-json_str = json.loads(fr.read())
-
+else:
+    fr = open("git.txt", "w+", encoding='utf-8')
+    json_str = dictObj
+fr.close()
 if len(json_str['path']) == 0:
     path = os.getcwd()
 else:
