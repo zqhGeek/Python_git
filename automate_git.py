@@ -8,7 +8,8 @@ import os
 
 dictObj = {
     'path': '',
-    'branch': ''
+    'branch': '',
+    'remote': ''
 }
 
 fr = open("git.txt", "r", encoding='utf-8')
@@ -29,16 +30,20 @@ subprocess.call(["git", "add", "."])
 print('请输入提交备注:', end='')
 txt = input()
 subprocess.call(["git", "commit", "-m", "auto push at " + txt + " " + str(datetime.datetime.now())])  # 加上当前系统的时间
-print('请输入拉取/推送的分支(默认develop):', end='')
+print('请输入拉取/推送的分支(默认origin/develop):', end='')
 pull_push = input()
+remote = pull_push.split('/')
 if len(pull_push) == 0:
-    if len(json_str['branch']) == 0:
+    if len(json_str['branch']) == 0 or len(json_str['remote']) == 0:
         pull_push = "develop"
+        remote = "origin"
     else:
         pull_push = json_str['branch']
+        remote = json_str['remote']
 json_str['branch'] = pull_push
-subprocess.call(["git", "pull", "origin", pull_push])
-subprocess.call(["git", "push", "origin", pull_push])
+json_str['remote'] = remote
+subprocess.call(["git", "pull", remote, pull_push])
+subprocess.call(["git", "push", remote, pull_push])
 fw = open("git.txt", "w", encoding='utf-8')
 fw.write(json.dumps(json_str))
 fw.close()
