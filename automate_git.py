@@ -13,17 +13,17 @@ dictObj = {
 }
 
 fr = open("git.txt", "r", encoding='utf-8')
-print('请输入仓库路径:', end='')
 json_str = json.loads(fr.read())
-path = input()
-if len(path) == 0:
-    if len(json_str['path']) == 0:
-        path = os.getcwd()
-    else:
-        path = json_str['path']
-else:
-    os.chdir(path)
 
+if len(json_str['path']) == 0:
+    path = os.getcwd()
+else:
+    path = json_str['path']
+print('请输入仓库路径(默认:'+path+'):', end='')
+input_path = input()
+if len(input_path) != 0:
+    path = input_path
+os.chdir(path)
 print(path)
 json_str['path'] = path
 subprocess.call(["git", "add", "."])
