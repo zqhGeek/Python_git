@@ -52,8 +52,9 @@ if len(input_str) != 0:
 json_str['branch'] = pull_push
 json_str['remote'] = remote
 print(remote + '/' + pull_push)
-subprocess.call(["git", "pull", remote, pull_push])
-subprocess.call(["git", "push", remote, pull_push])
 fw = open("git.txt", "w", encoding='utf-8')
 fw.write(json.dumps(json_str))
 fw.close()
+subprocess.call(["git", "pull", remote, pull_push])
+subprocess.call(["git", "push", remote, pull_push])
+
