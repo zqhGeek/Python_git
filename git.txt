@@ -1,1 +1,0 @@
-{"path": "D:\\IDEA_Project\\python_git", "branch": "master", "remote": "server"}
