@@ -5,6 +5,7 @@ import subprocess
 import datetime
 
 import os
+from json import JSONDecodeError
 
 dictObj = {
     'path': '',
@@ -13,7 +14,10 @@ dictObj = {
 }
 if os.access("git.txt", os.F_OK):
     fr = open("git.txt", "r", encoding='utf-8')
-    json_str = json.loads(fr.read())
+    try:
+        json_str = json.loads(fr.read())
+    except JSONDecodeError:
+        json_str = dictObj
 else:
     fr = open("git.txt", "w+", encoding='utf-8')
     json_str = dictObj
@@ -22,7 +26,7 @@ if len(json_str['path']) == 0:
     path = os.getcwd()
 else:
     path = json_str['path']
-print('请输入仓库路径(默认:'+path+'):', end='')
+print('请输入仓库路径(默认:' + path + '):', end='')
 input_path = input()
 if len(input_path) != 0:
     path = input_path
@@ -39,7 +43,7 @@ if len(json_str['branch']) == 0 or len(json_str['remote']) == 0:
 else:
     pull_push = json_str['branch']
     remote = json_str['remote']
-print('请输入拉取/推送的分支(默认:'+remote+'/'+pull_push+'):', end='')
+print('请输入拉取/推送的分支(默认:' + remote + '/' + pull_push + '):', end='')
 input_str = input()
 if len(input_str) != 0:
     split_str = input_str.split('/')
@@ -47,7 +51,7 @@ if len(input_str) != 0:
     pull_push = split_str[1]
 json_str['branch'] = pull_push
 json_str['remote'] = remote
-print(remote+'/'+pull_push)
+print(remote + '/' + pull_push)
 subprocess.call(["git", "pull", remote, pull_push])
 subprocess.call(["git", "push", remote, pull_push])
 fw = open("git.txt", "w", encoding='utf-8')
